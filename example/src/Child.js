@@ -9,7 +9,7 @@ const Child = ({ translate, onLangChange }) => {
 	return (
 		<div>
 			<h2>{translate("Good morning")}</h2>
-			<a onClick={() => onLangChange()}>Spanish</a>
+			<button onClick={() => onLangChange()}>Spanish</button>
 		</div>
 	);
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-phrase";
+import { useTranslate } from "react-phrase";
 
 /**
  * @author
@@ -14,7 +14,7 @@ const es = {
 };
 const Child1 = () => {
 	const [lang] = useState("es");
-	const translate = useTranslation({ en, es }, lang);
+	const translate = useTranslate({ en, es }, lang);
 
 	return <div>{translate("Good morning")}</div>;
 };

@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import { default as Provider } from "react-phrase";
 
 import Child from "./Child";
-import Child1 from "./Child1";
 
 const en = {
 	"Good morning": "Good morning"
@@ -27,7 +26,6 @@ export default class App extends Component {
 						}
 					/>
 				</Provider>
-				<Child1 />
 			</Fragment>
 		);
 	}

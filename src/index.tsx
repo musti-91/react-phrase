@@ -7,7 +7,7 @@ export default TranslationProvider;
 
 export const withTranslate = withTranslation;
 
-export const useTranslation = (phrases: Phrase, lang?: string) =>
+export const useTranslate = (phrases: Phrase, lang?: string) =>
 	getTranslate(phrases, lang ? lang : getLocale) as Translate;
 
 export const locale = getLocale;

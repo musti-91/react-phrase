@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-phrase" target="blank"><img src="logo.png" width="120" alt="react-phrase logo" /></a>
+</p>
+
 # react-phrase
 
 > Internationalization for react apps

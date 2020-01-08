@@ -54,11 +54,13 @@ export default class App extends Component {
 
 #### Props
 
-| prop    | type   | default |
-| ------- | ------ | ------- |
-| phrases | Object | {}      |
-| lang    | string | en      |
-|         |        |         |
+| prop    | type   | default | required |
+| ------- | ------ | ------- | -------- |
+| phrases | Object | {}      | true     |
+| lang    | string | en      | false    |
+|         |        |         |          |
+
+> Note: `lang` props will always fallback to locale.
 
 ### Child
 
@@ -83,6 +85,17 @@ const Child = ({ translate, onLangChange }: Props) => {
 };
 
 export default withTranslate(Child);
+```
+
+> Note: `translate` function has `options` as 2nd argument, you could pass an object with your keys if you have variable inside your message, check below:
+
+```jsx
+	const es = {
+		"Hello %{name}":"Hola %{name}",
+	}
+	....
+	<h2>{translate("Hello %{name}")}</h2>
+
 ```
 
 ### Hooks
@@ -113,11 +126,13 @@ export default MyComponent;
 
 #### `useTranslate` Props
 
-| prop    | type   | default |
-| ------- | ------ | ------- |
-| phrases | Object | {}      |
-| lang    | string | en      |
-|         |        |         |
+| prop    | type   | default | required |
+| ------- | ------ | ------- | -------- |
+| phrases | Object | {}      | true     |
+| lang    | string | en      | false    |
+|         |        |         |          |
+
+> Note: `lang` props will always fallback to locale.
 
 ## License
 

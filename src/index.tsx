@@ -1,15 +1,13 @@
-/**
- * @class InitComponent
- */
+import { default as TranslationProvider } from "./Provider";
+import { default as withTranslation, Translate } from "./withTranslate";
+import { Phrase } from "./helper";
+import getTranslate, { getLocale } from "./i18n";
 
-import * as React from "react";
+export default TranslationProvider;
 
-export type Props = { text: string };
+export const withTranslate = withTranslation;
 
-export default class InitComponent extends React.Component<Props> {
-	render() {
-		const { text } = this.props;
+export const useTranslation = (phrases: Phrase, lang?: string) =>
+	getTranslate(phrases, lang ? lang : getLocale) as Translate;
 
-		return <div>Example Component: {text}</div>;
-	}
-}
+export const locale = getLocale;

@@ -1,32 +1,20 @@
-import React, { Component, Fragment } from "react";
-import { default as Provider } from "react-phrase";
+import React from 'react'
+import { Provider } from 'react-phrase'
 
-import Child from "./Child";
+import { Child } from './Child'
 
 const en = {
-	"Good morning": "Good morning"
-};
+	'welcome.morning': 'Good morning %{name}.',
+}
 
 const es = {
-	"Good morning": "Buenos días"
-};
+	'welcome.morning': 'Buenos días %{name}.',
+}
 
-export default class App extends Component {
-	state = {
-		lang: "en"
-	};
-	render() {
-		const { lang } = this.state;
-		return (
-			<Fragment>
-				<Provider phrases={{ en, es }} lang={lang}>
-					<Child
-						onLangChange={() =>
-							this.setState({ lang: lang === "en" ? "es" : "en" })
-						}
-					/>
-				</Provider>
-			</Fragment>
-		);
-	}
+export default function App() {
+	return (
+		<Provider phrases={{ en, es }}>
+			<Child />
+		</Provider>
+	)
 }

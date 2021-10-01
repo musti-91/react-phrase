@@ -1,17 +1,16 @@
 import React from "react";
-import { withTranslate } from "react-phrase";
-/**
- * @author
- * @function Child
- **/
+import { withTranslate } from 'react-phrase'
 
-const Child = ({ translate, onLangChange }) => {
-	return (
-		<div>
-			<h2>{translate("Good morning")}</h2>
-			<button onClick={() => onLangChange()}>Spanish</button>
-		</div>
-	);
-};
+export const Child = withTranslate(
+	({ translate, onLanguageChange, currentLanguage }) => {
+		const morning = translate('welcome.morning', { name: 'John' })
 
-export default withTranslate(Child);
+		return (
+			<div>
+				<h2>{morning}</h2>
+				<h2>Current Language {currentLanguage}</h2>
+				<button onClick={() => onLanguageChange('es')}>Change language</button>
+			</div>
+		)
+	}
+)

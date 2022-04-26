@@ -34,7 +34,7 @@
 		"@svgr/rollup": "^2.4.1",
 		"@types/jest": "^26.0.24",
 		"@types/node-polyglot": "^0.4.34",
-		"@types/react": "^17.0.15",
+		"@types/react": "^18.0.7",
 		"@types/react-dom": "^16.0.5",
 		"babel-core": "^6.26.3",
 		"babel-runtime": "^6.26.0",

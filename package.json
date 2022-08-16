@@ -32,7 +32,7 @@
 	},
 	"devDependencies": {
 		"@svgr/rollup": "^2.4.1",
-		"@types/jest": "^26.0.24",
+		"@types/jest": "^28.1.7",
 		"@types/node-polyglot": "^0.4.34",
 		"@types/react": "^17.0.15",
 		"@types/react-dom": "^16.0.5",

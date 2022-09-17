@@ -104,7 +104,7 @@ export default withTranslate(Child);
 
 ### Hooks
 
-Without a Provider you could use `useTranslate` hook to get translate function
+Without HOC(wihtTranslate) You could use a hook `useTranslate` to get translate values.
 
 ```jsx
 import React, { useState } from "react";
@@ -118,14 +118,13 @@ const es = {
 	"Good morning": "Buenos días"
 };
 
-const MyComponent = () => {
+export const MyComponent = () => {
 	const [lang] = useState("es");
 	const translate = useTranslate({ en, es }, lang);
 
 	return <div>{translate("Good morning")}</div>;
 };
 
-export default MyComponent;
 ```
 
 #### `useTranslate` Props

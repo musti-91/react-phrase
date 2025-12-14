@@ -1,17 +1,17 @@
-import * as React from "react";
+import * as React from "react"
 
-import getTranslate, { getLocale } from "./i18n";
-import { Phrase } from "./helper";
+import getTranslate, { getLocale } from "./i18n"
+import { Phrase } from "./helper"
 
-export const TranslationContext = React.createContext({});
+export const TranslationContext = React.createContext({})
 
 /**
  * Provider Types
  */
 export interface iProvider {
-	phrases: Phrase;
-	children: any;
-	lang?: string;
+	phrases: Phrase
+	children: any
+	lang?: string
 }
 
 export default ({ phrases, lang, children }: iProvider) => (
@@ -20,4 +20,4 @@ export default ({ phrases, lang, children }: iProvider) => (
 	>
 		{children}
 	</TranslationContext.Provider>
-);
+)

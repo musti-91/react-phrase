@@ -3,6 +3,6 @@
  */
 export interface Phrase {
 	[key: string]: {
-		[value: string]: string;
-	};
+		[value: string]: string
+	}
 }

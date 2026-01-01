@@ -44,7 +44,7 @@
 		"babel-core": "^6.26.3",
 		"babel-runtime": "^6.26.0",
 		"cross-env": "^5.1.4",
-		"gh-pages": "^5.0.0",
+		"gh-pages": "^6.3.0",
 		"prettier": "^3.7.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
